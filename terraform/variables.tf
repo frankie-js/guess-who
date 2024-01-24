@@ -6,6 +6,10 @@
 # REQUIRED PARAMETERS
 # ---------------------------------------------------------
 
+# ---------------------------------------------------------
+# OPTIONAL PARAMETERS
+# ---------------------------------------------------------
+
 variable "profile" {
   type        = string
   description = "AWS named profile"
@@ -18,6 +22,7 @@ variable "region" {
   default     = "us-east-1"
 }
 
-# ---------------------------------------------------------
-# OPTIONAL PARAMETERS
-# ---------------------------------------------------------
+variable "force_destroy" {
+  type        = bool
+  description = "Allow bucket to be destroyed on delete, regardless of if it contains data"
+}

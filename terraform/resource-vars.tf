@@ -30,7 +30,6 @@ variable "additional_tags" {
 # LOCALS
 ###########################################################
 
-# FIXME
 locals {
   # Name prefix for label components
   name_prefix = lower(var.override_name_prefix != "" ? var.override_name_prefix : "${var.environment}-${var.project}")

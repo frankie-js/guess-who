@@ -34,6 +34,8 @@ resource "random_string" "suffix" {
 
 resource "aws_s3_bucket" "website" {
   bucket = local.website_bucket_name
+
+  force_destroy = var.force_destroy
 }
 
 resource "aws_s3_bucket_policy" "allow_public_access" {

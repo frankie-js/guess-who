@@ -3,9 +3,9 @@
 ###########################################################
 
 output "website_bucket_name" {
-  value = local.website_bucket_name
+  value = aws_s3_bucket.website.id
 }
 
 output "website_bucket_url" {
-  value = "http://${local.website_bucket_name}.s3-website-us-east-1.amazonaws.com "
+  value = "http://${aws_s3_bucket.website.id}.s3-website-${var.region}.amazonaws.com"
 }
